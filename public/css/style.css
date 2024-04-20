@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem; /* 1rem = 10px */
+}
+
+.container {
+    border: 2px solid black;
+    margin: 3rem;
+    padding: 2rem;
+    border-radius: 15px;
+    background-color: #ff8b00;
+    color: white;
+    height: 20rem;
+}
+
+.h1 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.cointainer__cotizar {
+    display: flex;
+    justify-content: center;
+    flex-direction: row; /* Mantener los elementos en una fila */
+    justify-content: space-between; 
+    align-items: center; /* Alinear los elementos verticalmente */
+    gap: 1rem;
+}
+
+.container__input {
+    display: flex;
+    flex-direction: column;
+ 
+}
+
+input {
+    border-radius: 5px;
+    padding: .5rem;
+}
+
+.input_tamano input {
+    width: 7rem;
+}
+
+.btn__cotizar {
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 15rem;
+    background-color: #018cbe;
+}
