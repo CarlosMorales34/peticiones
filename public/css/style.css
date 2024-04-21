@@ -10,51 +10,157 @@ html {
 
 body {
     font-size: 1.6rem; /* 1rem = 10px */
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
-
 .container {
-    border: 2px solid black;
+    border: 1px solid black;
     margin: 3rem;
     padding: 2rem;
     border-radius: 15px;
     background-color: #ff8b00;
     color: white;
-    height: 20rem;
+    height: 10rem;
+    font-size: 1.9rem;
+    
 }
-
 .h1 {
     display: flex;
     justify-content: center;
     margin-bottom: 1rem;
+    font-size: 5rem;
 }
 
 .cointainer__cotizar {
-    display: flex;
     justify-content: center;
     flex-direction: row; /* Mantener los elementos en una fila */
     justify-content: space-between; 
     align-items: center; /* Alinear los elementos verticalmente */
     gap: 1rem;
 }
-
-.container__input {
-    display: flex;
+.container__input{
+    position: relative;
     flex-direction: column;
- 
 }
 
+.container__input label{
+    position: relative;
+    left: 5rem;
+    transform: scaleX(-50%);
+    margin-bottom: 1rem;
+}
+.container__input--tamanos label, .container__input--tipo label{
+    position: relative;
+    left: 3rem;
+    transform: scaleX(-50%);
+}
+
+
 input {
-    border-radius: 5px;
-    padding: .5rem;
+    border: 0px;
+    border-radius: 15px;
+    padding: 1rem;
+    margin-top: .5rem;
+}
+select{
+    width: 19rem;
+    padding: 1rem;
+    border-radius: 15px;
 }
 
 .input_tamano input {
     width: 7rem;
 }
 
+
 .btn__cotizar {
+    border-radius: 2rem;
+    padding: 1rem;
+    width: 19.3rem;
+    background-color: #018cbe;
+    font-size: 2rem;
+    color: white;
+    transition: all .3s ease-in-out;
+    border: 0px;
+    
+}
+
+/* Contenido dinamico */
+.contentDinamic__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3rem;
+    padding: 2rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: black;
+    height: 9.5rem;
+    font-size: 1.6rem;
+}
+.contentDinamic__container:hover {
+    box-shadow: 10px 10px 8px rgba(0, 0, 0, 0.3);
+    border: 1.6px solid black;
+}
+
+.container__itemsDinamic{
+    display: flex;
+    flex-direction: column;
+}
+.btn__start{
     border-radius: 1rem;
     padding: 1rem;
-    width: 15rem;
-    background-color: #018cbe;
+    background-color: #21cf3e;
+    font-size: 1.6rem;
+    border: 0px;
+    color: white;
+}
+/* Reglas generales */
+.btn__cotizar:hover, .btn__start:hover{
+    filter: brightness(110%);
+    cursor: pointer;
+    box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.3);
+    border: 1px solid black;
+
+}
+
+@media  screen and (min-width: 500px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        height: 65rem;
+    }
+    
+    .cointainer__cotizar {
+        display: block;
+    }
+}
+/* Responsive */
+@media  screen and (min-width: 1315px) {
+    .container {
+        
+        height: 19.6rem;
+    }
+    .cointainer__cotizar {
+        display: flex;
+    }
+    .input_tamano #tamanoAlto {
+        width: 7rem;
+        border-radius: 50px 0px 0px 50px;
+    }
+    .input_tamano #tamanoLargo {
+        width: 7rem;
+        border-radius: 0px;
+    }
+    .input_tamano #tamanoAncho {
+        width: 7rem;
+        border-radius: 0px 50px 50px 0px;
+    }
+    .container__input--btn{
+        position: relative;
+        top: 12px;
+    }
+    
 }
