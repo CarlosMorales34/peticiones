@@ -88,7 +88,7 @@ select{
 .contentDinamic__container{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     margin: 3rem;
     padding: 2rem;
     border: 1px solid black;
@@ -106,6 +106,8 @@ select{
 .container__itemsDinamic{
     display: flex;
     flex-direction: column;
+    align-content: center;
+    
 }
 .btn__start{
     border-radius: 1rem;
